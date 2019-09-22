@@ -19,43 +19,43 @@
     & > * {
         padding: 10px;
     }
+}
 
-    .hero__name {
-        text-transform: uppercase;
+.hero__name {
+    text-transform: uppercase;
+}
 
-        .hero__lastname {
-            display: block;
-            font-size: 2em;
-            font-weight: bold;
-        }
-        
-        .hero__firstname {
-            display: block;
-            font-size: 1.5em;
-        }
-    }
+.hero__lastname {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
 
-    .hero__details {
-        .hero__detailsMain {
-            display: block;
-        }
+.hero__firstname {
+    display: block;
+    font-size: 1.5em;
+}
 
-        .hero__detailsSide {
-            display: block;
-            color: #C9C9C9;
-        }
-    }
+.hero__detailsMain {
+    display: block;
+}
 
-    @media (min-width: 768px) {
+.hero__detailsSide {
+    display: block;
+    color: #C9C9C9;
+}
+
+@media (min-width: 768px) {
+    .hero {
         align-items: center;
         flex-flow: row;
 
         & > * {
             flex: 1;
         }
+    }
 
-        .hero__name {
-            text-align: right;
-        }
+    .hero__name {
+        text-align: right;
     }
 }
