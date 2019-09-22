@@ -17,7 +17,7 @@
     background: linear-gradient(90deg, $gradient1 0%, $gradient2 100%); 
 
     & > * {
-        padding: 10px;
+        padding: 5px 5vw;
     }
 }
 
@@ -52,6 +52,7 @@
 
         & > * {
             flex: 1;
+            padding: 10px;
         }
     }
 
