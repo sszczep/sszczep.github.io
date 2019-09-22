@@ -1,0 +1,50 @@
+$navbar-height: 60px;
+
+.nav {
+    position: absolute;
+    width: 100vw;
+    height: $navbar-height;
+    bottom: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #4D4D4D;
+    text-transform: uppercase;
+    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+
+    background-color: #fff;
+
+    .nav__brand {
+        margin-left: 10px;
+
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .nav__sections {
+        height: inherit;
+        margin: 0; 
+
+        & > a {
+            height: inherit;
+            line-height: $navbar-height;
+            padding: 0 10px;
+
+            display: inline-block;
+
+            text-decoration: none;
+            color: inherit;
+
+            & > li {
+                display: inline-block;
+            }
+        }
+
+        .nav__section--active {
+            color: #fff;
+            background-color: #4D4D4D;
+        }
+    }
+}
