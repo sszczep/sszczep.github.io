@@ -1,23 +1,17 @@
-@import "colors";
-
-$navbar-height: 60px;
+@import "variables";
 
 .nav {
-    position: absolute;
+    position: -webkit-sticky;
+    position: sticky;
     width: 100vw;
     height: $navbar-height;
-    bottom: 0;
+    top: 0;
     
     color: #fff;
     text-transform: uppercase;
     font-family: Futura,Trebuchet MS,Arial,sans-serif; 
 
     background-color: $primary-color;
-
-    &.nav--fixed {
-        position: fixed;
-        top: 0;
-    }
 }
 
 .nav__progress {

@@ -1,12 +1,18 @@
-@import "colors";
+@import "variables";
 
 .section {
-    min-height: 100vh;
+    min-height: calc(100vh - #{$navbar-height});
+    width: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
 
+    &:nth-child(2n) {
+        color: $primary-color;
+    }
+
     &:nth-child(2n - 1) {
         background-color: $primary-color;
+        color: #fff;
     }
 }
