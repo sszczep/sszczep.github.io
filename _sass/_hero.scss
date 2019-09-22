@@ -1,3 +1,5 @@
+@import "colors";
+
 .hero {
     min-height: 100vh;
     width: 100%;
@@ -11,8 +13,8 @@
     font-family: Futura,Trebuchet MS,Arial,sans-serif; 
     font-size: 1.5rem;
 
-    background: rgb(59,21,113);
-    background: linear-gradient(90deg, rgba(59,21,113,1) 0%, rgba(186,36,74,1) 100%); 
+    background: $gradient1;
+    background: linear-gradient(90deg, $gradient1 0%, $gradient2 100%); 
 
     & > * {
         padding: 10px;

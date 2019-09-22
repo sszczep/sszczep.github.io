@@ -1,0 +1,12 @@
+@import "colors";
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    &:nth-child(2n - 1) {
+        background-color: $primary-color;
+    }
+}

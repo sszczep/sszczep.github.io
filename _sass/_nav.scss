@@ -1,3 +1,5 @@
+@import "colors";
+
 $navbar-height: 60px;
 
 .nav {
@@ -6,45 +8,58 @@ $navbar-height: 60px;
     height: $navbar-height;
     bottom: 0;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    color: #4D4D4D;
+    color: #fff;
     text-transform: uppercase;
     font-family: Futura,Trebuchet MS,Arial,sans-serif; 
 
-    background-color: #fff;
+    background-color: $primary-color;
 
-    .nav__brand {
-        margin-left: 10px;
-
-        font-size: 1.5em;
-        font-weight: bold;
+    &.nav--fixed {
+        position: fixed;
+        top: 0;
     }
+}
 
-    .nav__sections {
+.nav__progress {
+    height: 5px;
+}
+
+.nav__progress--background {
+    width: 0%;
+    height: inherit;
+    background-color: $gradient2;
+}
+
+    
+.nav__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__brand {
+    margin-left: 10px;
+
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav__links {
+    height: inherit;
+    margin: 0; 
+
+    & > a {
         height: inherit;
-        margin: 0; 
+        line-height: $navbar-height;
+        padding: 0 10px;
 
-        & > a {
-            height: inherit;
-            line-height: $navbar-height;
-            padding: 0 10px;
+        display: inline-block;
 
+        text-decoration: none;
+        color: inherit;
+
+        & > li {
             display: inline-block;
-
-            text-decoration: none;
-            color: inherit;
-
-            & > li {
-                display: inline-block;
-            }
-        }
-
-        .nav__section--active {
-            color: #fff;
-            background-color: #4D4D4D;
         }
     }
 }
