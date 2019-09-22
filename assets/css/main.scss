@@ -1,6 +1,8 @@
 ---
 ---
 
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
 @import "hero";
 @import "nav";
 @import "sections";
@@ -11,6 +13,7 @@ html, body {
 }
 
 html { 
+    font-family: 'Lato', sans-serif;
     font-size: 12px;
 
     @media (min-width: 320px) {
