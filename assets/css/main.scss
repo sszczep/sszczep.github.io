@@ -3,6 +3,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
+@import "variables";
 @import "hero";
 @import "nav";
 @import "sections";
@@ -23,4 +24,6 @@ html {
     @media (min-width: 768px) {
         font-size: 16px;
     }
+
+    background-color: $primary-color;
 }

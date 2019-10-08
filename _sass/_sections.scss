@@ -6,6 +6,7 @@
     display: block;
 
     &:nth-child(2n) {
+        background-color: #fff;
         color: $primary-color;
     }
 
@@ -24,5 +25,5 @@
     display: block;
     position: relative;
     left: 0px;
-    top: -60px;
+    top: -#{$navbar-height};
 }
