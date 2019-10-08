@@ -3,7 +3,6 @@
 .nav {
     position: -webkit-sticky;
     position: sticky;
-    width: 100vw;
     height: $navbar-height;
     top: 0;
     
@@ -42,7 +41,7 @@
 
     text-align: center;
 
-    overflow-x: scroll;
+    overflow-x: auto;
 
     & > a {
         height: inherit;
