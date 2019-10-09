@@ -12,6 +12,7 @@
 
     background: $gradient1;
     background: linear-gradient(120deg, $gradient1 0%, $gradient2 100%); 
+    background-size: 200% 200%;
 
     & > * {
         padding: 5px 5vw;
@@ -47,6 +48,13 @@
         align-items: center;
         flex-flow: row;
 
+        animation: GradientAnimation 20s ease-in-out infinite;
+        @keyframes GradientAnimation {
+            0% { background-position:0% 50% }
+            50% { background-position:100% 50% }
+            100% { background-position:0% 50% }
+        }
+
         & > * {
             flex: 1;
             padding: 10px;
@@ -55,5 +63,18 @@
 
     .hero__name {
         text-align: right;
+        animation: NameSlideInAnimation 1s ease-in-out;
+        @keyframes NameSlideInAnimation {
+            0% { margin-bottom: 8vh }
+            100% { margin-bottom: 0 }
+        }
+    }
+
+    .hero__details {
+        animation: DetailsSlideInAnimation 1s ease-in-out;
+        @keyframes DetailsSlideInAnimation {
+            0% { margin-top: 8vh }
+            100% { margin-top: 0 }
+        }
     }
 }
