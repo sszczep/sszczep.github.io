@@ -2,28 +2,38 @@
 
 .about-me {
     display: grid;
-    grid-template: repeat(3, auto) / none;
+    grid-template: repeat(2, auto) / none;
     grid-gap: 5rem;
     justify-content: center;
     align-content: center;
+    margin: auto;
+    max-width: 1200px;
+
     padding: 1rem;
     box-sizing: border-box;
 }
 
-.skills__header {
-    display: block;
-    margin-bottom: 2rem;
-
-    font-size: 1.2rem;
-    text-align: center;
+.about-me__description {
+    display: grid;
+    grid-template: repeat(2, auto) / none;
+    grid-gap: 3rem;
+    align-content: center;
 }
 
-.skills__grid {
+.description__picture {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-right: 5px;
+
+    border-radius: 3px;
+    background: url("https://thoughtcatalog.files.wordpress.com/2013/10/screen-shot-2013-10-17-at-10-29-12-am.png?w=584&h=397") 50% 50% no-repeat;
+}
+
+.description__skills {
     display: grid;
     grid-template: repeat(3, auto) / none;
     grid-gap: 1rem;
-    justify-content: center;
-    align-content: center;
 }
 
 .skills__category {
@@ -45,15 +55,71 @@
     color: #B24219;
 }
 
+.timeline {
+    display: none;
+    position: relative;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 2.5px;
+
+    width: 3px; 
+    background: linear-gradient($gradient1 80%, transparent);
+}
+
+.timeline__date {
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline__date:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: -7px;
+    top: 2.5px;
+    background-color: #fff;
+    border: 3px solid $gradient1;
+    border-radius: 50%;
+}
+
+.timeline__events {
+    padding: 10px 0 10px 30px;
+    margin: 0;
+
+    list-style: none;
+}
+
+.timeline__event {
+    padding: 5px 0;
+    color: rgb(94, 94, 94);
+}
+
+.timeline__event:before {
+    content: '- '
+}
+
 @media (min-width: 1024px) {
     .about-me {
-        grid-template: none / repeat(3, auto);
+        grid-template: none / repeat(2, auto);
+    }
+
+    .timeline {
+        display: block;
     }
 }
 
-@media (min-width: 640px) {
-    .skills__grid {
-        grid-template: repeat(2, auto) / repeat(2, 1fr);
-        justify-content: flex-start;
+@media (min-width: 400px) {
+    .description__skills {
+        grid-template: none / repeat(3, 1fr);
     }
 }
