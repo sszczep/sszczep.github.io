@@ -5,12 +5,12 @@
     width: 100%;
     display: block;
 
-    &:nth-child(2n) {
+    &:nth-child(2n - 1) {
         background-color: #fff;
         color: $primary-color;
     }
 
-    &:nth-child(2n - 1) {
+    &:nth-child(2n) {
         background-color: $primary-color;
         color: #fff;
     }
