@@ -1,0 +1,45 @@
+@import "variables";
+
+.about-me {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 10rem;
+    justify-content: center;
+    align-content: center;
+}
+
+.skills__header {
+    display: block;
+    margin-bottom: 3rem;
+
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.skills__grid {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.skills__category {
+    display: block;
+    padding: .5rem 1rem;
+    margin-bottom: .5rem;
+
+    color: #fff;
+    background-color: $primary-color;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.skills__technologies {
+    text-align: left;
+}
+
+.skills__technology--accent {
+    color: #B24219;
+}
