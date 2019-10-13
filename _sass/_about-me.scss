@@ -3,7 +3,6 @@
 .about-me {
     display: grid;
     grid-template: repeat(2, auto) / none;
-    grid-gap: 5rem;
     justify-content: center;
     align-content: center;
     margin: auto;
@@ -110,6 +109,7 @@
 
 @media (min-width: 1024px) {
     .about-me {
+        grid-gap: 5rem;
         grid-template: none / repeat(2, auto);
     }
 
