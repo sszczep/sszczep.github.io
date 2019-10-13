@@ -31,8 +31,12 @@
 
 .description__skills {
     display: grid;
-    grid-template: repeat(3, auto) / none;
+    grid-template: repeat(2, auto) / repeat(2, 1fr);
     grid-gap: 1rem;
+}
+
+.skills__item:last-of-type {
+    grid-column: 1 / span 2;
 }
 
 .skills__category {
@@ -121,5 +125,9 @@
 @media (min-width: 400px) {
     .description__skills {
         grid-template: none / repeat(3, 1fr);
+    }
+
+    .skills__item:last-of-type {
+        grid-column: initial;
     }
 }
