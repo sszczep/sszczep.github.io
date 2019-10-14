@@ -6,13 +6,13 @@
     align-content: center;
     flex-flow: column;
 
-    color: #fff;
-    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
-    font-size: 1.5em;
-
     background: $gradient1;
     background: linear-gradient(120deg, $gradient1 0%, $gradient2 100%); 
     background-size: 200% 200%;
+
+    color: #fff;
+    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+    font-size: 1.5em;
 
     & > * {
         padding: 5px 5vw;
@@ -25,12 +25,14 @@
 
 .hero__lastname {
     display: block;
+
     font-size: 2em;
     font-weight: bold;
 }
 
 .hero__firstname {
     display: block;
+
     font-size: 1.5em;
 }
 
@@ -40,6 +42,7 @@
 
 .hero__detailsSide {
     display: block;
+
     color: #C9C9C9;
 }
 
@@ -63,6 +66,7 @@
 
     .hero__name {
         text-align: right;
+        
         animation: NameSlideInAnimation 1s ease-in-out;
         @keyframes NameSlideInAnimation {
             0% { margin-bottom: 8vh }

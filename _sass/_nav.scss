@@ -1,28 +1,13 @@
 @import "variables";
 
 .nav {
-    position: -webkit-sticky;
-    position: sticky;
     height: $navbar-height;
-    top: 0;
     
+    background-color: $primary-color;
+
     color: #fff;
     text-transform: uppercase;
     font-family: Futura,Trebuchet MS,Arial,sans-serif; 
-
-    background-color: $primary-color;
-
-    z-index: 1;
-}
-
-.nav__progress {
-    height: 5px;
-}
-
-.nav__progress--background {
-    width: 0%;
-    height: inherit;
-    background-color: $gradient1;
 }
 
 .nav__content {
