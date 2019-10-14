@@ -1,9 +1,27 @@
 <section class="contact-me">
-    <div class="contact-me__details">
+    <form class="contact-me__form">
+        <span class="form__title">Send me a message</span>
 
-    </div>
+        <label class="form__label" for="form__firstname">Your name</label>
+        <div class="form__group">
+            <div class="input__wrapper">
+                <input class="form__input" name="form__firstname" type="text" placeholder="First name">
+            </div>
+            <div class="input__wrapper">
+                <input class="form__input" name="form__lastname" type="text" placeholder="Last name">
+            </div>
+        </div> 
 
-    <div class="contact-me__form">
+        <label class="form__label" for="form__email">Email address</label>
+        <div class="input__wrapper">
+            <input class="form__input" name="form__email" type="text" placeholder="Eg. example@domain.com">
+        </div>
 
-    </div>
+        <label class="form__label" for="form__message">Message</label>
+        <div class="input__wrapper">
+            <textarea class="form__textarea" name="form__message" placeholder="What can I do for you?" rows="6"></textarea>
+        </div>
+
+        <input class="form__button" type="button" value="Send">
+    </form>
 </section>
