@@ -1,2 +1,7 @@
 sass:
   style: compact
+
+exclude:
+  - .gitignore
+  - LICENSE.md
+  - README.md
