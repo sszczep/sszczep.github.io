@@ -15,7 +15,7 @@
 
     background-color: $hero-background-color;
 
-    animation: BackgroundAnimation 1s ease-in-out forwards;
+    animation: BackgroundAnimation 1s ease-in-out;
     @keyframes BackgroundAnimation {
         0% { height: 0vh }
         100% { height: inherit }
