@@ -6,9 +6,12 @@
     <meta name="description" content="Site about a passionate web developer and hobbyist">
     <meta name="author" content="Sebastian Szczepański">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
   </head>
   <body>
     {{ content }}
+
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script src="{{ '/assets/js/contact-form.js' | relative_url }}"></script>
   </body>
 </html>

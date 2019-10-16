@@ -1,28 +1,29 @@
-<section class="contact-me">
-    <form class="contact-me__form">
-        <span class="form__title">Send me a message</span>
+<section id="contact-me">
+    <form id="contact-me__form">
+        <span id="form__title">Send me a message</span>
 
         <div class="form__group">
             <label class="form__label" for="form__firstname">First name</label>
-            <div class="input__wrapper">
-                <input class="form__input" id="form__firstname" name="form__firstname" type="text" placeholder="First name">
-            </div>
+            <input class="form__input" id="form__firstname" name="firstname" type="text" placeholder="First name (required)" required>
             <label class="form__label" for="form__lastname">Last name</label>
-            <div class="input__wrapper">
-                <input class="form__input" id="form__lastname" name="form__lastname" type="text" placeholder="Last name">
-            </div>
+            <input class="form__input" id="form__lastname" name="lastname" type="text" placeholder="Last name (required)" required>
         </div> 
 
         <label class="form__label" for="form__email">Email address</label>
-        <div class="input__wrapper">
-            <input class="form__input" id="form__email" name="form__email" type="text" placeholder="Eg. example@domain.com">
-        </div>
+        <input class="form__input" id="form__email" name="email" type="email" placeholder="Email address (required)" required>
 
         <label class="form__label" for="form__message">Message</label>
-        <div class="input__wrapper">
-            <textarea class="form__textarea" id="form__message" name="form__message" placeholder="What can I do for you?" rows="6"></textarea>
-        </div>
+        <textarea class="form__textarea" id="form__message" name="message" placeholder="How can I help you? (required)" rows="6" required></textarea>
 
-        <input class="form__button" type="button" value="Send">
+        <button type="submit" id="form__submit">Send</button>
+        <p id="form__error" class="hidden"></p>
     </form>
+
+    <div id="contact-me__success" class="hidden">
+        <img id="success__image" src="{{ '/assets/images/email.png' | relative_url }}">
+        <p id="success__text">
+            I've received your email!<br>
+            Thanks for contacting me, I will respond as soon as possible!
+        </p>
+    </div>
 </section>

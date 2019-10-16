@@ -1,12 +1,12 @@
 @import "variables";
 
-.hero {
+#hero {
     position: relative; 
     width: 100%;
     height: 100vh;
 }
 
-.hero__background {
+#hero__background {
     position: absolute;
     width: inherit;
     height: inherit;
@@ -22,7 +22,7 @@
     }
 }
 
-.hero__content {
+#hero__content {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -39,42 +39,42 @@
     font-size: 1.5em;
 }
 
-.hero__name {
+#hero__name {
     text-transform: uppercase;
 }
 
-.hero__lastname {
+#hero__lastname {
     display: block;
 
     font-size: 2em;
     font-weight: bold;
 }
 
-.hero__firstname {
+#hero__firstname {
     display: block;
 
     font-size: 1.5em;
 }
 
-.hero__description--main {
+#hero__description--main {
     display: block;
 }
 
-.hero__description--side {
+#hero__description--side {
     display: block;
 
     color: #C9C9C9;
 }
 
 @media (min-width: 768px) {
-    .hero__content {
+    #hero__content {
         align-items: center;
         flex-flow: row;
 
         padding: 0;
     }
 
-    .hero__name {
+    #hero__name {
         flex: 1;
         padding: .5rem;
 
@@ -87,7 +87,7 @@
         }
     }
 
-    .hero__description {
+    #hero__description {
         flex: 1;
         padding: .5rem;
 
