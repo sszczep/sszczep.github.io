@@ -45,7 +45,7 @@
 
 .form__input, .form__textarea {
     width: 100%;
-    padding: 1rem;
+    padding: .7rem;
 
     font-size: .9rem;
     font-family: Helvetica, Arial, sans-serif; 
@@ -63,7 +63,8 @@
     border: 1px solid #e6e6e6;
     border-radius: 2px;
 
-    transition: border .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    transition-property: border, padding-left;
 
     &:not(:placeholder-shown) {
         &:valid {
@@ -76,7 +77,8 @@
     }
 
     &:focus {
-        border: 1px solid #408dff
+        border: 1px solid #408dff;
+        padding-left: 1rem;
     }
 }
 
