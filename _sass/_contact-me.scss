@@ -63,6 +63,10 @@
     border: 1px solid #e6e6e6;
     border-radius: 2px;
 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+
     transition: all .3s ease-in-out;
     transition-property: border, padding-left;
 
