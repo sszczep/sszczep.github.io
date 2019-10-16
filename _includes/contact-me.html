@@ -2,24 +2,25 @@
     <form class="contact-me__form">
         <span class="form__title">Send me a message</span>
 
-        <label class="form__label" for="form__firstname">Your name</label>
         <div class="form__group">
+            <label class="form__label" for="form__firstname">First name</label>
             <div class="input__wrapper">
-                <input class="form__input" name="form__firstname" type="text" placeholder="First name">
+                <input class="form__input" id="form__firstname" name="form__firstname" type="text" placeholder="First name">
             </div>
+            <label class="form__label" for="form__lastname">Last name</label>
             <div class="input__wrapper">
-                <input class="form__input" name="form__lastname" type="text" placeholder="Last name">
+                <input class="form__input" id="form__lastname" name="form__lastname" type="text" placeholder="Last name">
             </div>
         </div> 
 
         <label class="form__label" for="form__email">Email address</label>
         <div class="input__wrapper">
-            <input class="form__input" name="form__email" type="text" placeholder="Eg. example@domain.com">
+            <input class="form__input" id="form__email" name="form__email" type="text" placeholder="Eg. example@domain.com">
         </div>
 
         <label class="form__label" for="form__message">Message</label>
         <div class="input__wrapper">
-            <textarea class="form__textarea" name="form__message" placeholder="What can I do for you?" rows="6"></textarea>
+            <textarea class="form__textarea" id="form__message" name="form__message" placeholder="What can I do for you?" rows="6"></textarea>
         </div>
 
         <input class="form__button" type="button" value="Send">
