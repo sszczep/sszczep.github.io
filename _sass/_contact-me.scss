@@ -65,12 +65,14 @@
 
     transition: border .3s ease-in-out;
 
-    &:valid {
-        border: 1px solid #04c26c;
-    }
+    &:not(:placeholder-shown) {
+        &:valid {
+            border: 1px solid #04c26c;
+        }
 
-    &:invalid {
-        border: 1px solid #ff6680;
+        &:invalid {
+            border: 1px solid #ff6680;
+        }
     }
 
     &:focus {
