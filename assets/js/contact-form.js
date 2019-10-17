@@ -36,6 +36,18 @@
                 // Show success message
                 form.classList.toggle('hidden');
                 success.classList.toggle('hidden');
+
+                // After 5 seconds close modal
+                setTimeout(() => {
+                    main.classList.remove('shown');
+
+                    // Wait one more second to switch views (let the animation finish)
+                    setTimeout(() => {
+                        form.classList.toggle('hidden');
+                        success.classList.toggle('hidden');
+                        form.reset();
+                    }, 1000);
+                }, 5000);
             }).catch(err => {
                 console.log(err);
                 // If error occured, show it
