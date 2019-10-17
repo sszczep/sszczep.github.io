@@ -1,5 +1,4 @@
 <section id="contact-me">
-    <button type="button" id='contact-me__close'>x</button>
     <div id="contact-me__wrapper">
         <form id="contact-me__form">
             <span id="form__title">Send me a message</span>
@@ -17,7 +16,10 @@
             <label class="form__label" for="form__message">Message</label>
             <textarea class="form__textarea" id="form__message" name="message" placeholder="How can I help you? (required)" rows="6" required></textarea>
 
-            <button type="submit" id="form__submit">Send</button>
+            <div class="form__buttons">
+                <button type="button" id="contact-me__close">Close</button>
+                <button type="submit" id="form__submit">Send</button>
+            </div>
             <p id="form__error" class="hidden"></p>
         </form>
 
