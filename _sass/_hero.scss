@@ -4,34 +4,34 @@
     position: relative; 
     width: 100%;
     height: 100vh;
-}
 
-#hero__background {
-    position: absolute;
-    width: inherit;
-    height: inherit;
-    left: 0;
-    top: 0;
-
-    background-color: $hero-background-color;
-
-    animation: BackgroundAnimation 1s ease-in-out;
+    background-size: 100vh 200vh;
+    background-image: linear-gradient(to bottom, $hero-background-color 50%, $background-color 50%);
+    
+    overflow: auto;
+    
+    animation: BackgroundAnimation 1s ease-in-out forwards reverse;
     @keyframes BackgroundAnimation {
-        0% { height: 0vh }
-        100% { height: inherit }
+        0% { background-position: initial }
+        100% { background-position: 0 -100vh }
     }
 }
 
 #hero__content {
-    position: absolute;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template:
+        "." 1fr
+        "name" auto
+        "description" auto
+        "actions" 1fr
+        / 1fr;
+    grid-row-gap: 1rem;
+    align-items: center;
     align-content: center;
-    flex-flow: column;
     width: inherit;
-    height: inherit;
+    min-height: 100%;
 
-    padding: 1rem;
+    padding: 10px;
     box-sizing: border-box;
 
     color: #fff;
@@ -41,6 +41,7 @@
 
 #hero__name {
     text-transform: uppercase;
+    grid-area: name;
 }
 
 #hero__lastname {
@@ -56,6 +57,24 @@
     font-size: 1.5em;
 }
 
+#hero__github {
+    display: inline-block;
+    margin-top: 5px;
+
+    padding: 5px;
+
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #313959;
+
+    background-color: #fff;    
+}
+
+#hero__description {
+    grid-area: description;
+}
+
 #hero__description--main {
     display: block;
 }
@@ -66,35 +85,60 @@
     color: #C9C9C9;
 }
 
+#hero__actions {
+    grid-area: actions;
+    display: grid;
+    justify-items: center;
+}
+
+.hero__button {
+    position: relative;
+    padding: 10px;
+
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+
+    appearance: none;
+    outline: 0;
+    border: 0;
+
+    cursor: pointer;
+
+    background-color: transparent;
+
+    &--outline {
+        border: 3px solid #fff;
+        border-radius: 30px;
+
+        transition: border-radius .3s ease-in-out;
+
+        &:hover {
+            border-radius: 10px;
+        }
+    }
+}
+
 @media (min-width: 768px) {
     #hero__content {
-        align-items: center;
-        flex-flow: row;
-
-        padding: 0;
+        grid-template:
+            "name description" 1fr
+            "actions actions" auto
+            / 1fr 1fr;
     }
 
     #hero__name {
-        flex: 1;
         padding: .5rem;
 
         text-align: right;
-        
-        animation: NameSlideInAnimation 1s ease-in-out;
-        @keyframes NameSlideInAnimation {
-            0% { margin-bottom: 8vh }
-            100% { margin-bottom: 0 }
-        }
     }
 
     #hero__description {
-        flex: 1;
         padding: .5rem;
+        transform: translateY(35px);
+    }
 
-        animation: DetailsSlideInAnimation 1s ease-in-out;
-        @keyframes DetailsSlideInAnimation {
-            0% { margin-top: 8vh }
-            100% { margin-top: 0 }
-        }
+    #hero__actions {
+        margin-bottom: 30px;
     }
 }

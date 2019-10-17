@@ -1,8 +1,19 @@
 (() => {
+    const showModal = document.getElementById('hero__contact-me');
+    const closeModal = document.getElementById('contact-me__close');
+    const main = document.getElementById('contact-me');
     const form = document.getElementById('contact-me__form');
     const formSubmit = document.getElementById('form__submit');
     const formError = document.getElementById('form__error');
     const success = document.getElementById('contact-me__success');
+
+    showModal.addEventListener('click', () => {
+        main.classList.add('shown');
+    });
+
+    closeModal.addEventListener('click', () => {
+        main.classList.remove('shown');
+    });
 
     // Listen on form submit
     form.addEventListener('submit', event => {
