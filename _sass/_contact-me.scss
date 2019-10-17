@@ -1,7 +1,7 @@
 @import "variables";
 
 #contact-me {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
 
@@ -27,12 +27,13 @@
 
     width: 100%;
     min-height: 100vh;
+
+    padding: 40px 10px;
+    box-sizing: border-box;
 }
 
 #contact-me__form {
-    width: 600px;
-    
-    padding: 1rem;
+    max-width: 600px;
 }
 
 #form__title {

@@ -10,13 +10,7 @@ html, body {
     padding: 0;
 }
 
-html {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-
-    overflow: hidden;
-
+body {
     font-family: Roboto, sans-serif;
     font-size: 12px;
 
@@ -29,8 +23,6 @@ html {
     }
 
     background-color: $background-color;
-
-    scroll-behavior: smooth;
 }
 
 .hidden {
